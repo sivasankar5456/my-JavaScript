@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traverse</title>
+</head>
+<body>
+    
+<h1 onclick="sample()"> traversing of tags</h1>
+<hr>
+
+<p> in this section we'll learn traversing of prent ,
+    child and siblings of one tag through several properties and methods</p>
+
+<h3> parent</h3>
+<ol> 
+    
+    <p>shivendra</p>
+    <li>parent</li>
+<li>child</li>
+<li>siblings</li>
+
+</ol>
+
+<button onclick="sample()">Execute</button>
+<script>
+
+
+    // --------------> parent properties
+    
+    
+            // let list1 = document.querySelector("li");
+            // console.log(list1);
+    
+            // function sample() 
+            // {
+            // let list1 = document.querySelector("li");
+            // console.log(list1);
+            
+            // }
+            
+            // sample();
+    
+            let list1 = document.querySelector("li");
+            console.log(list1.parentElement);
+            console.log(list1.parentNode);
+    
+            // let head = document.querySelector("h1");
+            // console.log(head.parentElement);
+            // console.log(head.parentNode);
+    
+
+    // ---------------->  child properties
+    
+    
+    
+            let orderList = document.querySelector("ol");
+            // console.log(orderList.childElementCount);
+            //  console.log(orderList.childNodes);
+            // console.log(orderList.children);
+            // let orderList = document.querySelector("body");
+            // console.log(orderList.children);
+            // console.log(orderList.firstChild);
+            // console.log(orderList.firstElementChild);
+            // console.log(orderList.lastChild);
+            // console.log(orderList.lastElementChild);
+            // console.log(orderList.hasChildNodes);
+    
+    
+    // -------------->  sibling properties 
+    
+    
+            // let li1 = document.querySelector("li");
+            // // console.log(li1);
+            // console.log(li1.previousSibling);
+            // console.log(li1.previousElementSibling);
+            // console.log(li1.nextSibling);
+            // console.log(li1.nextElementSibling);
+            // console.log(li1.nextElementSibling.nextElementSibling);
+    
+    // function sample() {
+    //     let li2 = document.querySelector("li");
+    //       console.log(li2.textContent);
+    //       li2.textContent = "shiva";
+    
+    // }
+        </script>
+
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- <button onclick="sample()">Execute</button> this working method is called event handling  -->
+<!-- <button ondblclick="sample()">Execute</button>    -->
+
+
+<!-- <script>
+    let list1= document.querySelector("li")
+console.log(list1);
+</script> -->
+
+<!-- <script>
+    function sample() {
+
+        let list1= document.querySelector("li")
+console.log(list1);  
+        
+    }
+    
+    
+</script> -->
+
+<!-- <script>
+    function sample() {
+
+        // let list1= document.querySelector("li")
+// console.log(list1.parentElement);  
+// console.log(list1.parentNOde);   
+// let head= document.querySelector("h1")  parent
+// console.log(head.parentElement);
+
+// let orderList= document.querySelector("ol")
+// console.log(orderList.childElementCount);
+//// it is node
+// console.log(orderList.childNodes);
+
+// console.log(orderList.children);   
+// it will fgive only elemental node
+// let orderList= document.querySelector("body")
+// console.log(orderList.childern);
+
+//let orderList= document.querySelector("ol")
+// console.log(orderList.firstChild);
+// console.log(orderList.firstElementChild);
+
+//console.log(orderList.hasChiNodes);
+
+    }
+</script> -->
+
+<script>
+
+    // function sample() 
+    // {
+        
+
+
+    // }
+//     let li1= document.querySelector("li")
+// console.log(li1.sibling);
+
+// console.log(li1.nextSibling);
+// console.log(li1.nextElementSibling);
+// console.log(li1.previousSibling);
+// console.log(li1.previousElementSibling);
+</script>
+
+
+
+
+</body>
+</html>

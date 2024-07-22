@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            font-size: 65px;
+            color: blue;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    
+    #shiva{
+    background-color:pink;
+    height: 70px;
+    width: 300px;
+    
+    }
+    
+    
+    input{
+    background-color:crimson;
+    height: 70px;
+    width: 100px;
+    font-size: 40px;
+    background: radial-gradient(blue,black);
+color: white;
+    }
+    table{
+    background: radial-gradient(blue,black);
+
+    }
+    #del{
+        height: 400px;
+    background: radial-gradient(blue,black);
+color: white;
+font-size: 40px;
+width: 100px;
+
+
+    }
+    
+    </style>
+
+
+
+</head>
+<body>
+    <div class = title >shiva Calculator</div>
+    <table border="1">
+    <tr>
+        <td colspan="3"><input type="text" id="shiva"/></td>
+        <td><input type="button" value="." onclick="dis('.')"/> </td>
+        <td rowspan="5">
+            <input type="button" value="delet" onclick="del()" id="del"/> 
+            <!-- <button  onclick="del()" id="del">D <br> e <br> l<br>e<br>t<br>e</button> -->
+        </td>
+    </tr>
+
+    <tr>
+        <td><input type="button" value="1" onclick="dis('1')"/> </td>
+        <td><input type="button" value="2" onclick="dis('2')"/> </td>
+        <td><input type="button" value="3" onclick="dis('3')"/> </td>
+        <td><input type="button" value="+" onclick="dis('+')"/> </td>
+    </tr>
+
+    <tr>
+        <td><input type="button" value="4" onclick="dis('4')"/> </td>
+        <td><input type="button" value="5" onclick="dis('5')"/> </td>
+        <td><input type="button" value="6" onclick="dis('6')"/> </td>
+        <td><input type="button" value="-" onclick="dis('-')"/> </td>
+    </tr>
+
+    <tr>
+        <td><input type="button" value="7" onclick="dis('7')"/> </td>
+        <td><input type="button" value="8" onclick="dis('8')"/> </td>
+        <td><input type="button" value="9" onclick="dis('9')"/> </td>
+        <td><input type="button" value="*" onclick="dis('*')"/> </td>
+    </tr>
+
+    <tr>
+        <td><input type="button" value="0" onclick="dis('0')"/> </td>
+        <td><input type="button" value="%" onclick="dis('%')"/> </td>
+        <td><input type="button" value="/" onclick="dis('/')"/> </td>
+        <td><input type="button" value="=" onclick="solve()"/> </td>
+    </tr>
+
+    </table>
+
+
+    <script>
+        
+        function dis(val)
+        {
+        document.getElementById("shiva").value+=val
+        }
+
+        function solve()
+        {
+        let a = document.getElementById("shiva").value
+        let b = eval(a)
+        document.getElementById("shiva").value = b
+        }
+        
+        function del()
+        {
+        document.getElementById("shiva").value = ""
+        }
+        </script>
+
+
+</body>
+</html>

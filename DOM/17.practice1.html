@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice1</title>
+</head>
+<body>
+    <h1>foodList</h1>
+    <p>add your favoriote food</p>
+    <ol>
+        <li>chicken</li>
+        <li>egg</li>
+        <li>fish</li>
+        <li>prons</li> <br><br>
+
+        <input type="text" placeholder="Enter Food" id="food"> <br><br>
+ 
+<input type="number" placeholder="enter position" id="pos"><br><br>
+
+        <button onclick="addFood()">add Food</button>
+        <button onclick="replaceFood()">replace Food</button>
+         <button onclick="deleteFood()">delete Food</button>
+    </ol>
+
+<script> 
+
+function addFood() 
+{
+    var ol=document.querySelector("ol");
+    var food=document.getElementById("food").value;
+var list=document.createElement("li");
+list.textContent=food;
+
+var position=document.getElementById("pos").value;
+var whichChild=ol.firstElementChild;
+
+for (let a = 1; a < position; a++) {
+    
+    whichChild=whichChild.nextElementSibling;
+    
+}
+ol.insertBefore(list,whichChild)
+ 
+}
+
+function replaceFood() 
+{
+    
+    var ol=document.querySelector("ol");
+    var food=document.getElementById("food").value;
+var list=document.createElement("li");
+list.textContent=food;
+
+var position=document.getElementById("pos").value;
+var whichChild=ol.firstElementChild;
+
+for (let a = 1; a < position; a++) {
+    
+    whichChild=whichChild.nextElementSibling;
+    
+}
+ol.replaceChild(list,whichChild)
+
+}
+
+function deleteFood() 
+{
+    
+    var ol=document.querySelector("ol");
+    var food=document.getElementById("food").value;
+var list=document.createElement("li");
+list.textContent=food;
+
+var position=document.getElementById("pos").value;
+var whichChild=ol.firstElementChild;
+
+for (let a = 1; a < position; a++) {
+    
+    whichChild=whichChild.nextElementSibling;
+    
+}
+ol.removeChild(whichChild)
+
+}
+
+
+
+
+
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+    }
+</style>
+
+</head>
+
+<body>
+    <h1 align="center">manipulation of attributes</h1>
+<div></div>
+    <button bgcolor="yellow" onclick="sample()">click me</button>
+
+    <script>
+        function sample() {
+
+            var head = document.querySelector("h1");
+            // alert(head.hasAttribute("bgcolor")) // it checks the attribute is present or not it gives the boolean value
+            alert(head.getAttribute("align"))// it gives the attribute value
+
+            // document.body.setAttribute("bgcolor","gold")
+            // console.log(head);
+            let Div=document.getElementsByTagName("div")
+            document.div.setAttribute("bgcolor","gold")
+        }
+    </script>
+
+</body>
+
+</html>

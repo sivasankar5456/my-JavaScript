@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list of food</title>
+</head>
+<body>
+    <h1>list of food</h1>
+<hr>
+<ol>
+    <li>chicken</li>
+    <li>egg</li>
+    <li>prons</li>
+    <li>fish</li>
+</ol>
+<input type="text" name="" id="" placeholder="enter food"><br><br>
+
+<button onclick="addFood()">add food</button>
+<button onclick="replaceFood()">replace food</button>
+<button onclick="deleteFood()">delete food</button>
+
+
+<script>
+
+function addFood()
+{
+var food=document.querySelector("input").value;
+
+var li=document.createElement("li");
+li.append(food)
+
+var ol=document.querySelector("ol");
+ol.appendChild(li,ol.lastElementChild);
+}
+
+function replaceFood()
+{
+    var food=document.querySelector("input").value;
+
+var li=document.createElement("li");
+li.append(food)
+
+var ol=document.querySelector("ol");
+ol.replaceChild(li,ol.lastElementChild);
+}
+
+function deleteFood() 
+{
+    
+    var ol=document.querySelector("ol");
+ol.removeChild(ol.lastElementChild);
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+<body>
+    <h1>list</h1><hr>
+<ol id="s">
+    <li>chicken</li>
+    <li>egg</li>
+    <li>fish</li>
+    <li>prons</li>
+</ol >
+<span>food:</span><input type="text" placeholder="enter food"><br><br>
+<button onclick="addFood()">addFood</button>
+<button onclick="replaceFood()">replaceFood</button>
+<button onclick="deleteFood()">Delete Food</button>
+
+<script>
+function addFood() {
+    
+var food=document.querySelector("input").value;
+
+var li=document.createElement("li");
+li.append(food)
+var ol=document.querySelector("ol");
+
+ol.appendChild(li,ol.lastElementChild);
+
+}
+
+function replaceFood()
+{
+    var food=document.querySelector("input").value;
+
+var li=document.createElement("li");
+li.append(food);
+
+var ol=document.querySelector("ol");
+ol.replaceChild(li,ol.lastElementChild);
+
+}
+
+
+function deleteFood()
+{
+
+   
+
+var ol=document.getElementById("s");
+
+ol.removeChild(ol.lastElementChild);
+
+}
+
+</script>
+
+</body>
+</html> -->

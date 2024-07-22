@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div
+        {
+            background-color: brown;
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+        }
+        input
+        {
+            color: aqua;
+            width: 240px;
+            height: 200px;
+            font-size: 50px;
+        }
+        button
+        {
+            height: 40px;
+            width: 110px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 align="center">counter</h1>
+    <hr>
+    <div>
+        <input type="text">
+        <button onclick="calculate(1)">+</button>
+        <button onclick="calculate(-1)">-</button>
+    </div>
+
+    <script>
+        function calculate(operator) 
+        {
+            var input = document.querySelector("input");
+            var val = Number(input.value);
+            input.value = val + operator;
+
+            if(input.value>=0 && input.value<=30)
+            {
+                input.style.background="blue";
+            }
+            else if(input.value>30 && input.value<=50)
+            {
+                input.style.background="green";
+            }
+            else
+            {
+                input.style.background="red";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food</title>
+
+
+</head>
+<body>
+
+    <h1>Food List</h1>
+<hr>
+<ol>
+<li>butter chicken</li>
+<li>thnadoori chicken</li>
+<li>fish fry</li>
+<li>mutton murgh masala</li> -->
+<!-- <li> egg baida masal</li>
+
+</ol>
+<input type="text" placeholder="enter your food">
+<br><br>
+<button onclick="addFood()"> add</button>
+<br><br>
+<button onclick="deleteFood()"> delete </button>
+<script>
+function addFood() {
+    
+var food=document.querySelector("input").value;
+var list=document.createElement("li");
+// list.innerText=food
+list.append(food)
+var ol=document.querySelector("ol");
+ol.append(list)
+
+}
+
+ function addFood() {
+    
+    var food=document.querySelector("input").value;
+    var list=document.createElement("li");
+    
+   list.append(food)
+    var ol=document.querySelector("ol");
+   ol.insertBefore(list,ol.lastElementChild) // to add before last element
+
+    //ol.insertBefore(list,ol.lastElementChild.previousElementSibling)
+//     var ol=document.querySelector("ol"); 
+// ol.replaceChild(list,ol.lastElementChild)
+
+
+
+}
+
+function deleteFood() {
+    var ol=document.querySelector("ol"); 
+ol.removeChild(ol.lastElementChild)
+
+}
+</script>
+    
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">food list</h1>
+    <hr>
+    <ol>
+        <li>chicken biriyani</li>
+        <li>chicken kabab</li>
+        <li>chilly chicken</li>
+        <li>hyderabad chicken</li>
+    </ol>
+    <input type="text" placeholder="enter the food to add"><br><br>
+
+    <button onclick="addFood()">add</button>
+    <button onclick="replaceFood()">replace</button>
+    <button onclick="deleteFood()">delete</button>
+
+    <script>
+        // function addFood() 
+        // {
+        //     var food = document.querySelector("input").value;
+
+        //     var list = document.createElement("li");
+        //     list.innerText = food;              // insertion of text node
+        //     // list.append(food);
+
+        //     var ol = document.querySelector("ol");
+        //     ol.appendChild(list);                   // insertion of elemental node
+        // }
+
+        function addFood() 
+        {
+            var food = document.querySelector("input").value;
+
+            var list = document.createElement("li");
+            list.append(food);
+
+            var ol = document.querySelector("ol");
+            ol.insertBefore( list , ol.lastElementChild.previousElementSibling);        // what insert and where insert
+        }
+
+
+        function replaceFood() 
+        {
+            var food = document.querySelector("input").value;
+
+            var list = document.createElement("li");
+            list.append(food);
+
+            var ol = document.querySelector("ol");
+            ol.replaceChild(list,ol.lastElementChild)     // what to replace where to replace
+        }
+
+        function deleteFood()
+        {
+           var ol = document.querySelector("ol") ;
+
+           ol.removeChild(ol.lastElementChild)
+        }
+    </script>
+</body>
+</html>

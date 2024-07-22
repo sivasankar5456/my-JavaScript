@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubble Arrow</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #parent {
+            height: 610px;
+            width: 600px;
+            border: solid black 1px;
+            margin-top: 100px;
+
+        }
+
+        #sec1 {
+            height: 150px;
+            width: 600px;
+            border: solid black 1px;
+        }
+
+        #div2 {
+            height: 150px;
+            width: 600px;
+            border: solid black 1px;
+        }
+
+        #div3 {
+            height: 150px;
+            width: 600px;
+            border: solid black 1px;
+        }
+
+        #div4 {
+            height: 150px;
+            width: 600px;
+            border: solid black 1px;
+        }
+
+        /* #canvas1{
+        background-color: yellow;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: solid 1px;
+        margin-left: -450px;
+        margin-top:25px
+    }   */
+        #canvas2 {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: solid 1px;
+            margin-left: -450px;
+            margin-top: 25px
+        }
+
+        #canvas3 {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: solid 1px;
+            margin-left: -450px;
+            margin-top: 25px
+        }
+
+        #canvas4 {
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: solid 1px;
+            margin-left: -450px;
+            margin-top: 25px
+        }
+
+        #arrow1 {
+            height: 10px;
+            width: 50px;
+            background-color: black;
+            margin-top: -100px;
+
+        }
+
+        #div1 {
+
+            height: 100px;
+            width: 130px;
+
+            margin-top: -100px;
+            margin-left: 480px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <section id="parent">
+
+            <section id="sec1">
+                <canvas id="canvas1" onclick="move() "></canvas>
+                <div id="div1"><canvas id="canvas"></canvas></div>
+            </section>
+
+        </section>
+    </center>
+    <script>
+
+        var can = document.getElementById('canvas');
+        var ctx = can.getContext('2d');
+
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'black'; // for the triangle fill
+        ctx.lineJoin = 'butt';
+
+        ctx.beginPath();
+        ctx.moveTo(50, 50);
+        ctx.lineTo(100, 50);
+        ctx.stroke();
+        canvas_arrow(ctx, 20, 7, 50, 50, 10);
+
+        function canvas_arrow(context, fromx, fromy, tox, toy, r) {
+            var x_center = tox;
+            var y_center = toy;
+
+            context.beginPath();
+
+            angle = Math.atan2(toy - fromy, tox - fromx)
+            x = r * Math.cos(angle) + x_center;
+            y = r * Math.sin(angle) + y_center;
+
+            context.moveTo(x, y);
+
+            angle += (1 / 3) * (2 * Math.PI)
+            x = r * Math.cos(angle) + x_center;
+            y = r * Math.sin(angle) + y_center;
+
+            context.lineTo(x, y);
+
+            angle += (1 / 3) * (2 * Math.PI)
+            x = r * Math.cos(angle) + x_center;
+            y = r * Math.sin(angle) + y_center;
+
+            context.lineTo(x, y);
+
+            context.closePath();
+
+            context.fill();
+        }
+
+        var canvas1 = document.getElementById("canvas1");
+        var ctx = canvas1.getContext("2d");
+        canvas1.width = 103;
+        canvas1.height = 125;
+        ctx.lineWidth = 3;
+
+        ctx.fillStyle = "yellow"
+        ctx.arc(50, 75, 50, 0, 2 * Math.PI)
+        ctx.fill()
+
+        canvas1.style.margin = "20px"
+        canvas1.style = "margin-left:-480px"
+
+        function move() {
+
+
+            var div1 = document.getElementById("div1");
+            div1.style = "margin-left:-330px";
+            div1.style.transition = "4000ms ease-out";
+
+
+
+            setTimeout(() => {
+                var canvas1 = document.getElementById("canvas1");
+                var ctx = canvas1.getContext("2d");
+                canvas1.width = 103;
+                canvas1.height = 125;
+                ctx.lineWidth = 3;
+
+                ctx.fillStyle = "grey"
+                ctx.arc(50, 75, 50, 0, 2 * Math.PI)
+                ctx.fill()
+
+                canvas1.style.margin = "20px"
+                canvas1.style = "margin-left:-480px"
+            }, 4000)
+        }
+    </script>
+</body>
+
+</html>

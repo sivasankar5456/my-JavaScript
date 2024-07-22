@@ -1,0 +1,64 @@
+db.pyStudents.insertMany([
+    ... {
+    ...         "name":"metro1",
+    ...         "location":"nationalClg"
+    ...     },
+    ...     {
+    ...         "name":"metro2",
+    ...         "location":"banashankari"
+    ...     },
+    ...     {
+    ...         "name":"metro3",
+    ...         "location":"lalbagh"
+    ...     },
+    ...     {
+    ...         "name":"metro4",
+    ...         "location":"magestic"
+    ...     },
+    ...     {
+    ...         "name":"metro",
+    ...         "location":"srinivas"
+    ...     }])
+    {
+            "acknowledged" : true,
+            "insertedIds" : [
+                    ObjectId("62fc9d3fd408ad54ec398346"),
+                    ObjectId("62fc9d3fd408ad54ec398347"),
+                    ObjectId("62fc9d3fd408ad54ec398348"),
+                    ObjectId("62fc9d3fd408ad54ec398349"),
+                    ObjectId("62fc9d3fd408ad54ec39834a")
+            ]
+    }
+    > db.pyStudents.find().pretty()
+    { "_id" : ObjectId("62fb458a05107e30edc916b5"), "name" : "py1" }
+    {
+            "_id" : ObjectId("62fb45c705107e30edc916b6"),
+            "name" : "py2",
+            "contact" : 98765432
+    }
+    {
+            "_id" : ObjectId("62fc9d3fd408ad54ec398346"),
+            "name" : "metro1",
+            "location" : "nationalClg"
+    }
+    {
+            "_id" : ObjectId("62fc9d3fd408ad54ec398347"),
+            "name" : "metro2",
+            "location" : "banashankari"
+    }
+    {
+            "_id" : ObjectId("62fc9d3fd408ad54ec398348"),
+            "name" : "metro3",
+            "location" : "lalbagh"
+    }
+    {
+            "_id" : ObjectId("62fc9d3fd408ad54ec398349"),
+            "name" : "metro4",
+            "location" : "magestic"
+    }
+    {
+            "_id" : ObjectId("62fc9d3fd408ad54ec39834a"),
+            "name" : "metro",
+            "location" : "srinivas"
+    }
+    >

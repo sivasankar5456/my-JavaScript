@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>workkkkk</title>
+<style>
+section{
+background-color: aqua;
+    height: 380px;
+    width: 380px;
+}
+div{
+
+    /* background-color: aqua; */
+    display: flex;
+    background-color:aq;
+width: 250px;
+height: 300px;
+    position: absolute;           
+    top: 50%;         
+    left: 50%;
+                            /* when ever we want to be senter we use this 4 properties */
+transform: translate(-50%,-50%);
+}
+input{
+    color: aqua;
+    width: 250px;
+    height: 250px;
+font-size: 60px;
+}
+
+button{
+height: 40px;
+width: 123px;
+
+}
+</style>
+</head>
+<body>
+    
+<h1>Counter</h1>
+<hr>
+
+
+<div>
+<input type="text">
+<button onclick="increase(10)"> + </button>
+<button onclick="decrease(-10)"> - </button>
+</div>
+
+<script> 
+
+function increase(speed) {
+   var input=document.querySelector("input") 
+   var val=Number(input.value);
+input.value=val+1;
+
+if(val>=1 && val<31){
+var div=document.querySelector("div")
+input.style.background="blue"
+
+}
+else if(val>30 && val<=60)
+{
+var div=document.querySelector("div")
+input.style.background="red"
+}
+else if(val>60 && val<=90)
+{
+var div=document.querySelector("div")
+input.style.backgroundColor ="yellow"
+}else{
+    var div=document.querySelector("div")
+div.style.background="white"
+}
+}
+
+function decrease(speed) {
+   var input=document.querySelector("input") 
+   var val=Number(input.value);
+input.value=val-1;
+
+if(input.val>=1 && input.val<=30){
+var div=document.querySelector("div")
+input.style.background="blue"
+
+}
+else if(input.val>30 && input.val<=60)
+{
+var div=document.querySelector("div")
+input.style.background="red"
+}
+else if(input.val>60 && input.val<=90)
+{
+var div=document.querySelector("div")
+input.style.background="yellow"
+}else{
+    var div=document.querySelector("div")
+    input.style.background="white"
+}
+
+}
+  
+</script>
+</body>
+</html>

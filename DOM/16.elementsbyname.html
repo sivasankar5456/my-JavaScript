@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">DOM</h1>
+    <hr>
+    <h2>Document Object Model</h2>
+    <p class="first-para">Dom is an interface where you can manuplate tags attributes and style through the javascript.Once the Docume is created dom tree will be created parallely.</p>
+​
+    <p class="first-para">In the Dom tree every end point is a node. we have a diffent type of nodes</p>
+​
+    <h3>Types of nodes</h3>
+​
+    <ol>
+        <li>Elemental node : When the node is a tag then we consider it as element</li>
+        <li>Text node : when the node is a normal text then we call it as text node</li>
+        <li>Attribute node : when the node is a attribute then we call it as attribute node</li>
+    </ol>
+    <hr>
+    <fieldset>
+        <legend align="center">Select your gender</legend>
+    
+        <input type="radio" name="gender" id="m" value="Male"> <label for="m">Male</label> <br>
+        <input type="radio" name="gender" id="f" value="Female"> <label for="f">Female</label> <br>
+        <input type="radio" name="gender" id="o" value="others"> <label for="o">Others</label> <br>
+    
+    </fieldset>
+    
+    <fieldset>
+    
+        <legend align="center">Select the skills </legend>
+    
+        <input type="checkbox" name="skill" id="java" value="Java"> <label for="java">Java</label><br>
+        <input type="checkbox" name="skill"> <label>Java script</label><br>
+        <input type="checkbox" name="skill"> <label>HTML</label><br>
+        <input type="checkbox" name="skill"> <label>CSS</label><br>
+        <input type="checkbox" name="skill"> <label>SQL</label><br>
+        <input type="checkbox" name="skill"> <label>MDB</label><br>
+        <input type="checkbox" name="skill"> <label>Springs</label>
+        <br>
+        <button onclick="sample()">click</button>
+    
+    </fieldset>
+    
+    <script>
+        function sample() {
+            
+        
+        // let para1 = document.getElementsByTagName("p");
+        // console.log(para1);
+
+        // let para2 = document.querySelectorAll("p");
+        // console.log(para2);
+
+        // let header = document.getElementById("header");
+        // let header = document.querySelector("#header");
+        // console.log(header);
+
+        // let paragraphs = document.getElementsByClassName("first-para");
+        // console.log(paragraphs);
+
+        // let list = document.getElementsByTagName("li");
+        // console.log(list);
+
+        let options = document.getElementsByName("gender");
+        console.log(options);
+
+        alert(options.getAttribute("gender"))
+        }
+    </script>
+
+</body>
+</html>
+    

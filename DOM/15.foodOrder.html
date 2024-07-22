@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    section{
+
+        /* background-color: aqua; */
+    }
+</style>
+
+</head>
+<body>
+
+    <section>
+    <h1 align="center">food list</h1>
+    <hr>
+    <ol>
+        <li>chicken biriyani</li>
+        <li>chicken kabab</li>
+        <li>chilly chicken</li>
+        <li>hyderabad chicken</li>
+    </ol>
+    <input type="text" placeholder="enter the food to add" id="food"><br><br>
+    <input type="number" placeholder="enter the position" id="pos"><br><br>
+
+    <button onclick="addFood()">AddFood</button>
+    <button onclick="deleteFood()">DeleteFood</button>
+    <button onclick="replaceFood()">ReplaceFood</button>
+</section>
+    <script>
+        function addFood()
+        {
+            var ol = document.querySelector("ol");
+            var food = document.getElementById("food").value;
+            var list = document.createElement("li");
+            list.textContent = food;
+            
+            var position = document.getElementById("pos").value;
+            var whichChild = ol.firstElementChild;
+
+            for(var a = 1; a<position;a++)
+            {
+                whichChild = whichChild.nextElementSibling;
+            }
+            ol.insertBefore(list , whichChild);
+        }
+        function replaceFood() {
+            var ol = document.querySelector("ol");
+            var food = document.getElementById("food").value;
+            var list = document.createElement("li");
+            list.textContent = food;
+            
+            var position = document.getElementById("pos").value;
+            var whichChild = ol.firstElementChild;
+
+            for(var a = 1; a<position;a++)
+            {
+                whichChild = whichChild.nextElementSibling;
+            }
+            ol.replaceChild(list , whichChild);
+        }
+
+        function deleteFood() {
+            var ol = document.querySelector("ol");
+            // var food = document.getElementById("food").value;
+            // var list = document.createElement("li");
+            // list.textContent = food;
+            
+            var position = document.getElementById("pos").value;
+            var whichChild = ol.firstElementChild;
+
+            for(var a = 1; a<position;a++)
+            {
+                whichChild = whichChild.nextElementSibling;
+            }
+            
+            ol.removeChild(whichChild);   
+        }
+
+    </script>
+</body>
+</html>

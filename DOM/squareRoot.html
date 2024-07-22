@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+<style>
+div{
+   
+   margin-left: 500px;
+   border: 5px solid aqua;
+   border-radius: 10px;
+   
+   background-color: aqua;
+   height: 400px;
+   width: 450px;
+}
+#bt1{
+   background-color: yellow;
+   height: 50px;
+   width: 50px;
+   border-radius: 50px;
+   font-size: 35px;
+   /* margin-left:150px; */
+}
+#bt2{
+   background-color: skyblue;
+   height: 50px;
+   width: 50px;
+   border-radius: 50px;
+   font-size: 35px;
+   
+}
+#bt3{
+   background-color: green;
+   height: 50px;
+   width: 50px;
+   border-radius: 50px;
+   font-size: 35px;
+}
+#bt4{
+   background-color: rgb(19, 41, 165);
+   height: 50px;
+   width: 50px;
+   border-radius: 50px;
+   font-size: 35px;
+}
+#bt5{
+   background-color: rgba(209, 45, 127, 0.801);
+   height: 50px;
+   width: 50px;
+   border-radius: 50px;
+   font-size: 35px;
+}
+
+#bt6{
+   background-color: red;
+   height: 50px;
+   width: 50px;
+   border-radius: 50px;
+   font-size: 35px;
+}
+
+#bt7{
+   background-color: pink;
+   height: 50px;
+   width: 50px;
+   border-radius: 10px;
+   font-size: 35px;
+}
+
+#num1{
+
+height: 50px;
+width: 250px;
+border: solid red ;
+border-radius: 15px;
+font-size: 45px;
+
+}
+
+#num2{
+
+height: 50px;
+width: 250px;
+border: solid red ;
+border-radius: 15px;
+font-size: 45px;
+}
+
+#result{
+
+height: 50px;
+width: 250px;
+border: solid red ;
+border-radius: 15px;
+margin-left: px;
+font-size: 45px;
+}
+span{
+   font-size: 23px;
+   color: black;
+   font: bolder;
+}
+
+#sp{
+   margin-left: 70px;
+   font-size: 23px;
+   color: black;
+   font: bolder;
+}
+
+</style>
+
+
+</head>
+<body>
+   <div> 
+      <h1>SHIVA Calculator</h1>
+<span>enter number1:</span><input type="number" id="num1"> <br><br>
+<span>enter number2:</span><input type="number"  id="num2"><br><br>
+<button onclick="addition()" id="bt1">+</button>
+<button onclick="subtraction()" id="bt2">-</button>
+<button onclick="mutiplication()" id="bt4">×</button>
+<button onclick="division()" id="bt3">÷</button>
+<button onclick="modulus()" id="bt5">%</button>
+<button onclick="Sqrt()" id="bt6">√</button>
+<button onclick="Cqrt()" id="bt7">3√</button> <br><br>
+
+<span id="sp"> Result:</span><input type="number" id="result">
+
+</div>
+<script>
+
+// var a=document.getElementById("num1").value;
+// var num1=document.createElement("li")
+// num1.value=a.value;
+// console.log(num1);
+// var b=document.getElementById("num2").value;
+
+function addition()
+{
+    var a=document.getElementById("num1");
+    var c=Number(a.value)
+    var b=document.getElementById("num2");
+    var d=Number(b.value)
+    var result=document.getElementById("result");
+result.value=c+d;
+}
+
+
+// function addition()
+// {
+//    var a=document.getElementById("num1").value;
+    
+//     var b=document.getElementById("num2").value;
+    
+//     var result=document.getElementById("result");
+// result.value= Number(a)+Number(b);
+
+   
+// }
+
+function subtraction() 
+{
+    var a=document.getElementById("num1").value;
+    
+    var b=document.getElementById("num2").value;
+    
+    var result=document.getElementById("result");
+result.value= (a-b);
+
+}
+
+function division()
+{
+    var a=document.getElementById("num1").value;
+    
+    var b=document.getElementById("num2").value;
+    
+    
+    var result=document.getElementById("result");
+result.value=(a/b);
+
+}
+
+function mutiplication() 
+{
+    var a=document.getElementById("num1").value;
+    
+    var b=document.getElementById("num2").value;
+    // b.value=Number
+    
+    var result=document.getElementById("result");
+result.value=(a*b);
+
+}
+
+function modulus()
+{
+
+   var a=document.getElementById("num1").value;
+    
+    var b=document.getElementById("num2").value;
+    
+    
+    var result=document.getElementById("result");
+result.value=(a%b);
+
+
+}
+function Sqrt(){
+   var a=document.getElementById("num1").value;
+   result.value=Math.sqrt(a)
+}
+
+// function Sqrt(){
+//    var b=document.getElementById("num2").value;
+//    result.value=Math.sqrt(b)
+// }
+
+// function Cqrt(){
+//    var a=document.getElementById("num1").value;
+//    result.value=Math.cbrt(a)
+// }
+
+function Cqrt(){
+   var b=document.getElementById("num2").value;
+   result.value=Math.cbrt(b)
+}
+</script>
+
+
+</body>
+</html>

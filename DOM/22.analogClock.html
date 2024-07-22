@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            background:linear-gradient(30deg,black,blue);;
+            width: 100vw;
+            height: 100vh;
+
+        }
+        #clock{
+            width: 400px;
+            height: 400px;
+            /* background-image:url(../DOM/photos/clock2.png); */
+    /* background-color:linear-gradient(blue,aqua); */
+        background-color: crimson;
+            border-radius: 50%;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+        }
+        #clock img
+        {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+        }
+        #seconds
+        {
+            height: 300px;
+            width: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            /* background-color: aqua; */
+        }
+        #seconds div:first-child{
+            background-color: red;
+            height: 150px;
+            width: 3px;
+            border-radius: 4px;
+        }
+        #seconds div:last-child{
+            background-color:transparent;
+            height: 150px;
+            width: 3px;
+        }
+
+        #minutes
+        {
+            height: 240px;
+            width: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+        }
+        #minutes div:first-child{
+            background-color: blue;
+            height: 120px;
+            width: 7px;
+            border-radius: 4px;
+        }
+        #minutes div:last-child{
+            background-color:transparent;
+            height: 120px;
+            width: 7px;
+        }
+
+        #hour
+        {
+            height: 160px;
+            width: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+        }
+        #hour div:first-child{
+            background-color: black;
+            height: 80px;
+            width: 10px;
+            border-radius: 4px;
+        }
+        #hour div:last-child{
+            background-color:transparent;
+            height: 80px;
+            width: 10px;
+        }
+
+
+        #sample
+        {
+            height: 20px;
+            width: 20px;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="clock">
+            <img src="photos/clock2.png">
+            <div id="seconds">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="minutes">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="hour">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="sample">
+                <div></div>
+                <div></div>
+            </div>
+
+        </div>
+    </section>
+    <script>
+            setInterval(() => {
+                var today = new Date();
+                var second = Number(today.getSeconds());
+                var sec= document.getElementById("seconds");
+                sec.style.transform = "translate(-50% , -50%) rotate("+ second * 6 +"deg)"
+            }, 1000);
+
+            setInterval(() => {
+                var today = new Date();
+                var minute = Number(today.getMinutes());
+                var min= document.getElementById("minutes");
+                min.style.transform = "translate(-50% , -50%) rotate("+ minute * 6 +"deg)"
+            }, 1000);
+
+            setInterval(() => {
+                var today = new Date();
+                var Hour = Number(today.getHours());
+                // var divide=Number()
+                var hour= document.getElementById("hour");
+                hour.style.transform = "translate(-50% , -50%) rotate("+ Hour * 30 +"deg)"
+            }, 1000);
+    </script>
+</body>
+</html>

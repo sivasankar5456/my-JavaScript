@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age 3</title>
+</head>
+<body>
+    <h1>age calculator</h1>
+    <hr>
+    <div>
+        <label for="name">name</label> <input type="text" placeholder="enter your full name" id="name" required><br><br>
+        <label>DOB</label> <input type="date" placeholder="enter your date of birth" id="dob"><br><br>
+        <button onclick="check()">check</button>
+        <hr>
+        <label>result</label> <input type="text" id="result">
+
+        <script>
+            function check() 
+            {
+                var name = document.getElementById("name").value;
+                var dob = document.getElementById("dob").value;
+                dob = new Date(dob);                                         // converting string dob to date object dob
+                var currentDate = new Date();                               // creating current date
+                var age = currentDate.getFullYear() - dob.getFullYear();     //  calculating age
+                console.log(age);
+
+                var result = document.getElementById("result");
+                result.value = `${name} is ${age} years old`;
+
+            }
+        </script>
+
+    </div>
+</body>
+</html>

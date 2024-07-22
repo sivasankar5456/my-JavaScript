@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+        section
+        {
+            background-color: aqua;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div
+        {
+            width: 350px;
+            background-color: aliceblue;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        div label
+        {
+            font-size: 25px;
+        }
+        div input
+        {
+            width: 250px;
+            height: 45px;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <label>Date : </label><input type="text" id="date">
+            <label>Time : </label><input type="text" id="time">
+        </div>
+    </section>
+
+    <script>
+        function display() 
+        {
+          setInterval(() =>{
+          var today = new Date();
+          document.getElementById("date").value = today.toLocaleDateString();
+          document.getElementById("time").value = today.toLocaleTimeString();
+          } , 1000);
+        }
+        display()
+    </script>
+
+
+<!-- IIFE : immediate invoke function expression -->
+    <!-- <script>
+       (function () 
+        {
+            console.log("chandu");
+        })()
+    </script> -->
+
+
+    
+</body>
+</html>

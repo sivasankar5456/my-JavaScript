@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style Manipulation</title>
+</head>
+<body>
+    <h1>style Manipulation</h1>
+<hr>
+<!-- <p>A Grimm’s Brother Tale: A miller tells a tale that his daughter
+     can turn straw into gold. A strange little man is willing to help…for 
+    a price. Guess his name and he will be gone…but what is his name?</p> -->
+
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Esse dolore qui laborum! Voluptate hic tempora voluptatum
+      iure facere omnis animi voluptatibus tempore praesentium?
+       Ipsum possimus cupiditate blanditiis, porro impedit ipsa?</p>
+
+<button onclick="sample()">click</button>
+
+<script>
+function sample()
+{
+//     var h1=document.querySelector("h1")
+// var ds=getComputedStyle(h1);  // getComputedStyle is used to check default css stlyes 
+// console.log(ds);
+
+var p=document.querySelector("p")
+var ds=getComputedStyle(p);
+console.log(ds);
+
+var head=document.querySelector("h1")
+head.style.color="red"
+head.style.fontFamily="cursive"
+head.style.background="yellow"
+head.style.width="350px"
+head.style.height="100px"
+head.style.borderRadius="10%"
+head.style.border="5px solid blue"
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

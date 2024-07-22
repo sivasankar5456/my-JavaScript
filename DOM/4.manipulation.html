@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manipulation</title>
+</head>
+<body>
+   <h1>manipulating the tag</h1>
+<hr>
+<p>Tags can be manuplated by using several properties and methods of DOM  </p>
+
+<input class="input" type="text" placeholder="enter the text"> <br><br>
+
+<button onclick="sample()">click here</button>
+
+<script> 
+function sample() {
+   
+//    var head=document.querySelector("h1") //.innerHTML
+// var x=head.innerText
+// console.log(typeof x);
+// console.log(x);
+// console.log(head);
+                     ////used to display text
+// var x=head.textContent
+// console.log(typeof x);
+// console.log(x);
+
+// var x=head.value;  // no value here so undefined is o/p
+// console.log(typeof x);
+// console.log(x);
+
+// var input=document.querySelector("input")
+
+// var x=input.value;           // when it is a input tag use value for it
+// console.log(typeof x);
+// console.log(x);
+
+ var input=document.querySelector("input")
+var head=document.createElement("h1")
+head.textContent=input.value;
+console.log(head);
+
+ document.body.append(head)  // it is like push 
+document.body.prepend(head)  // it is like unshift
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

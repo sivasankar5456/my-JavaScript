@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removeChild</title>
+    <style>
+        section {
+            margin-top: 100px;
+        }
+
+        section h1 {
+            margin-left: 725px;
+        }
+
+        #box {
+            margin: auto;
+            height: 37vh;
+            width: 40vw;
+            border: 2px solid black;
+        }
+
+        #insidebox1 {
+            height: 60px;
+            width: 39vw;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            margin: 3px;
+        }
+        #insidebox2 {
+            height: 60px;
+            width: 39vw;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            margin: 3px;
+        }
+        #insidebox3 {
+            height: 60px;
+            width: 39vw;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            margin: 3px;
+        }
+        #insidebox4 {
+            height: 60px;
+            width: 39vw;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            margin: 3px;
+        }
+
+        .insidebox marquee {
+            height: 20px;
+            width: 200px;
+            margin-left: 500px;
+        }
+
+        #div1 {
+            height: 50px;
+            width: 50px;
+            background-color: yellow;
+            border-radius: 50%;
+            border: 1px solid black;
+            /* margin: 10px; */
+            cursor: pointer;
+        }
+
+        #div2 {
+            height: 50px;
+            width: 50px;
+            background-color: blue;
+            border-radius: 50%;
+            border: 1px solid black;
+            /* margin: 10px; */
+            cursor: pointer;
+        }
+
+        #div3 {
+            height: 50px;
+            /* margin: 10px; */
+            width: 50px;
+            background-color: red;
+            border-radius: 50%;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        #div4 {
+            height: 50px;
+            width: 50px;
+            background-color: green;
+            border-radius: 50%;
+            border: 1px solid black;
+            /* margin: 10px; */
+            cursor: pointer;
+        }
+        #img{
+            margin-left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Bubbles App</h1>
+        <div id="box">
+            <div id="insidebox1">
+                <div onclick="move1()" id="div1"></div>
+                <div id="img"><--</div>
+            </div>
+            <div id="insidebox2">
+                <div onclick="move2()" id="div2"></div>
+                <div id="img"></div>
+            </div>
+            <div id="insidebox3">
+                <div onclick="move3()" id="div3"></div>
+                <div id="img"></div>
+            </div>
+            <div id="insidebox4">
+                <div onclick="move4()" id="div4"></div>
+                <div id="img"></div>
+            </div>
+            
+        </div>
+        <button onclick="reset()">Reset</button>
+    </section>
+
+    <script>
+        var count = 0;
+        function move1() {
+
+            var box = document.getElementById("insidebox1");
+            box.removeChild(box.lastElementChild)
+            
+            if(count==0)
+           { 
+                var box = document.getElementById("insidebox1");
+                box.style.display = "flex";
+                box.style.alignItems = "center"
+
+                var marq = document.createElement("marquee");
+                marq.textContent = "<--"
+                marq.direction = "left";
+                marq.behavior = "alternate";
+                marq.loop = "1";
+                marq.scrollamount = "10";
+
+                box.append(marq);
+
+                setTimeout(()=>{
+
+                    box.firstElementChild.style.backgroundColor = "grey"
+                    
+                } , 7700)
+
+                count++;
+        }
+        }
+        
+        </script>
+
+        </body>
+</html>

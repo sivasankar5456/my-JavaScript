@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body {}
+
+        section {
+            align-items: center;
+
+            /* background-image:url(../DOM/photos/freedom.jpg); */
+            height: 600px;
+            width: 800px;
+            background-color:white;
+            display: flex;
+
+        }
+
+
+        #d1 {
+            height: 550px;
+            width: 30px;
+            background-color: gold;
+            margin-left: 50px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        #d2 {
+
+            background-color: white;
+            height: 150px;
+            width: 250px;
+            margin-left: 0px;
+            margin-top: 80px;
+
+        }
+
+        #d3 {
+            background: red;
+            height: 250px;
+            width: 300px;
+            margin-top: 250px;
+            margin-right: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section>
+        <div id="d1"></div>
+        <marquee loop="1" height="700px" behavior="alternate" direction="up">
+            <div id="d2"></div>
+        </marquee>
+        
+        <div id="d3">
+           <img src="photos/normalpose.png" alt="">
+        </div>
+
+
+    </section>
+    <br>
+    <button id="bt1" onclick="rise()">rise the flag</button>
+
+    <button id="bt2" onclick="selute()">selute</button>
+
+
+
+    <script>
+
+        function rise() {
+
+            var d2 = document.getElementById("d2");
+            d2.style = " background-image:url(../DOM/photos/flag1-177387875-612x612.jpg);"
+
+            var sec = document.querySelector("section");
+            sec.style = "background-color:blue"
+
+           
+        }
+
+        function selute()
+        {
+            var img = document.getElementById("d3").firstElementChild;
+            img.src ="photos/seutel.png"
+
+            // var sec = document.querySelector("section");
+            // sec.style = "background-color:blue"
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
